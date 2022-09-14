@@ -1,4 +1,6 @@
 name: Create-NPM-package
+
+on:
   push:
     branhes: ['main']
 
