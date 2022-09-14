@@ -1,8 +1,9 @@
-name: Create-NPM-package
+name: Release
 
 on:
   push:
-    branhes: ['main']
+    branches:
+      - main
 
 jobs:
   publish-npm:
@@ -38,4 +39,5 @@ jobs:
           version: npm run version-packages
           publish: npm run release
           env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
